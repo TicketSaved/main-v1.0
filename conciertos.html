@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conciertos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!--Logo HEAD -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/Logo.jpg">
+
+  <style>
+    .carousel {
+      height: 300px;
+      width: 1500px;
+    }
+  </style>
+
+  <!--FUNCION PARA "INFO ENTRADAS"-->
+  <script>
+    $(document).ready(function () {
+      $('[data-toggle="popover"]').popover();
+    });
+  </script>
+  <!--FIN FUNCION PARA "INFO ENTRADAS"-->
+
+  <!--FUNCION PARA EL BUSCADOR -->
+  <script>
+    $(document).ready(function () {
+      $("#myInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+  <!--FIN FUNCION PARA EL BUSCADOR -->
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body class="justify-content-center  align-items-center">
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="inicio.html"><span>Ticket</span>Saved</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="dropdown"><a href="conciertos.html">Conciertos</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Mi Cuenta
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="perfil.html">Perfil</a></li>
+              <li><a href="#">Mis entradas</a></li>
+              <li><a href="#">Cerrar sesión</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="col-sm-7 mx-auto">
+    <br>
+    <div id="myCarousel" class="carousel slid" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <div class="item active">
+          <img src="assets/img/LEIVAofi.jpg" alt="Leiva" width="1500px" height="300px">
+          <div class="carousel-caption">
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assets/img/motomami.jpg" alt="Rosalia" width="1500px" height="300px">
+          <div class="carousel-caption">
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assets/img/Melendi.jpg" alt="Melendi" width="1500px" height="300px">
+          <div class="carousel-caption">
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assets/img/aitana.jpg" alt="Aitana" width="1500px" height="300px">
+          <div class="carousel-caption">
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assets/img/RHCP.jpg" alt="RedHot" width="1500px" height="300px">
+          <div class="carousel-caption">
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assets/img/BB.jpg" alt="BadBunny" width="1500px" height="300px">
+          <div class="carousel-caption">
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assets/img/Vm.jpg" alt="Vanesa Martin" width="1500px" height="300px">
+          <div class="carousel-caption">
+          </div>
+        </div>
+
+      </div>
+      <br><br>
+      <h2>Encuentra tu concierto</h2>
+      <input class="form-control" id="myInput" type="text" placeholder="Buscar concierto...">
+      <br>
+      <table class="table table-responsive table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Fecha</th>
+            <th scope="col">Artista</th>
+            <th scope="col">Recinto</th>
+            <th scope="col">Compra tu entrada</th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+          <tr>
+            <th scope="row">20 MAY 2022</th>
+            <td>Leiva</td>
+            <td>Wizink Center (Madrid)</td>
+            <td>Entradas Disponibles</td>
+          </tr>
+          <tr>
+            <th scope="row">21 JUN 2022</th>
+            <td>Bad Bunny</td>
+            <td>Estadio Camp Nou (Barcelona)</td>
+            <td><a href="cBadBunny.html">Entradas Disponibles</a></td>
+          </tr>
+          <tr>
+            <th scope="row">26 JUN 2022</th>
+            <td>Fito & Fitipaldis</td>
+            <td>Palacio Vistalegre Arena (Madrid)</td>
+            <td><a href="cFito.html">Entradas Disponibles</a></td>
+          </tr>
+          <tr>
+            <th scope="row">2 SEPT 2022</th>
+            <td>Melendi</td>
+            <td>Wizink Center (Madrid)</td>
+            <td><a href="cMelendi.html">Entradas Disponibles</a></td>
+          </tr>
+          <tr>
+            <th scope="row">11 NOV 2022</th>
+            <td>Aitana</td>
+            <td>Estadio Wanda Metropolitano (Madrid)</td>
+            <td><a title="Información." data-toggle="popover" data-trigger="hover"
+                data-content="A la venta el 18 OCT 2022.">
+                <!--INFO ENTRADAS-->
+                Pasa el ratón para obtener información
+              </a></td>
+          </tr>
+          <tr>
+            <th scope="row">19 NOV 2022</th>
+            <td>Lil Nas X</td>
+            <td>Shoko Madrid</td>
+            <td><a href="cLilNas.html">Entradas Disponibles</a></td>
+          </tr>
+          <tr>
+            <th scope="row">9 DIC 2022</th>
+            <td>Red Hot Chili Peppers</td>
+            <td>Palacio Municipal de Deportes de Granada (Granada)</td>
+            <td><a href="RHCP.html">Últimas Entradas Disponibles</a></td>
+          </tr>
+          <tr>
+            <th scope="row">9 DIC 2022</th>
+            <td>Mora</td>
+            <td>Sala Galileo (Madrid)</td>
+            <td><a href="cMora.html">Entradas Disponibles</a></td>
+          </tr>
+          <tr>
+            <th scope="row">20 AGO 2023</th>
+            <td>The Rolling Stones</td>
+            <td>Estadio Benito Villamarin (Sevilla)</td>
+            <td>Entradas Agotadas</td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+
+</html>

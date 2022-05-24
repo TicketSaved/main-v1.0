@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Concierto Lil Nas X</title>
+    <!--Logo HEAD -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/Logo.jpg">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .row.content {
+            height: 590px
+        }
+
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="inicio.html"><span>Ticket</span>Saved</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="conciertos.html">Conciertos</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Mi Cuenta
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="entradas.html">Mis entradas</a></li>
+                        <li><a href="#">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <br>
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-2 sidenav">
+                <img src="assets/img/CartelLilNasX.jpg" width="103%" height="50%" />
+                <p></p>
+                <p></p>
+                <p>Lil Nas X es un galardonado rapero, cantante y compositor de 23 años de Atlanta, Georgia. Saltó a la fama en 2019 cuando lanzó "Old
+                    Town Road" y simultáneamente puso patas arriba la industria musical: rompiendo las normas del
+                    género, trastocando las listas de éxitos y haciéndose viral en todo el mundo. Single número 1 más largo en la historia de Billboard
+                   . 16 veces Platino.</p>
+            </div>
+
+            <div class="col-sm-8 text-left">
+                <h2>Lil Nas X en Concierto <mark>(Shoko, Madrid)</mark>.</h2>
+                <p>Sábado, 19 de Noviembre de 2022. 22:30h.</p>
+                <form action="metodopago.html">
+                    <div class="form-group">
+                        <label for="sel1">Entradas no numeradas (87€):</label>
+                        <select class="form-control" id="sel1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <input type="submit" class="btn btn-warning" value="Comprar">
+                </form>
+                <hr>
+                <div class="text-center">
+                    <img src="assets/img/wizinkMelen.jpg" width="40%" height="40%" />
+                </div>
+            </div>
+            <div class="col-sm-2 sidenav">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Métodos de pago</title>
+    <!--Logo HEAD -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/Logo.jpg">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="inicio.html"><span>Ticket</span>Saved</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="conciertos.html">Conciertos</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Mi Cuenta
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="entradas.html">Mis entradas</a></li>
+                        <li><a href="#">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+
+    <div class="container">
+        <h2>Selecciona tu método de pago</h2>
+        <p>Haga clic en el panel plegable para abrirlo y cerrarlo.</p>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">Tarjeta de Crédito o Débito</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <form class="was-validated" action="pagoexito.html">
+                        <div class="mb-3 mt-3 panel-footer">
+                            <label for="tarjetanum" class="form-label">Nº de tarjeta</label>
+                            <input type="number" class="form-control" id="tarjetanum"
+                                placeholder="Introduzca el número de la tarjeta" required pattern="[0-9]{16}">
+                        </div>
+                        <div class="mb-3 mt-3 panel-footer">
+                            <label for="tarjetanom" class="form-label">Titular de la tarjeta</label>
+                            <input type="text" class="form-control" id="tarjetanom" required
+                                placeholder="Nombre titular de la tarjeta">
+                        </div>
+                        <div class="mb-3 mt-3 panel-footer">
+                            <label for="tarjeta1" class="form-label">Código de seguridad</label>
+                            <input type="text" class="form-control" id="tarjeta" required
+                                placeholder="Código de seguridad de la tarjeta">
+                        </div>
+                        <input type="submit" class="btn" value="Pagar Ahora">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse2">PayPal</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <form class="was-validated" action="pagoexito.html">
+                        <div class="mb-3 mt-3 panel-footer">
+                            <label for="tarjetanum" class="form-label">Nº de tarjeta</label>
+                            <input type="number" class="form-control" id="tarjetanum" required
+                                placeholder="Introduzca el número de la tarjeta" pattern="[0-9]{16}">
+                        </div>
+                        <div class="mb-3 mt-3 panel-footer">
+                            <label for="tarjetanom" class="form-label">Titular de la tarjeta</label>
+                            <input type="text" class="form-control" id="tarjetanom" required
+                                placeholder="Nombre titular de la tarjeta">
+                        </div>
+                        <div class="mb-3 mt-3 panel-footer">
+                            <label for="tarjeta1" class="form-label">Código de seguridad</label>
+                            <input type="text" class="form-control" id="tarjeta" required
+                                placeholder="Código de seguridad de la tarjeta">
+                        </div>
+                        <input type="submit" class="btn" value="Pagar Ahora">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
